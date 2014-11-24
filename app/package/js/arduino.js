@@ -47,6 +47,9 @@ var MKG = MKG || {};
             this.$btnReset.click($.proxy(this.handleClickBtnReset, this));
             this.$btnDisConnect = $('#btnDisConnect');
             this.$btnDisConnect.click($.proxy(this.handleClickBtnDisConnect, this));
+            this.$btnToggle = $('#btnToggle');
+            this.$btnToggle.click($.proxy(this.handleClickBtnToggle, this));
+            this.$sectionConfig = $('.config');
             this.$cnt = $('#cnt');
             chrome.storage.local.get(c.CNT_KEY, function(data) {
                 self.cnt = data[c.CNT_KEY] || 0;
@@ -77,6 +80,14 @@ var MKG = MKG || {};
             $plus.animate({top: -20}).promise().done(function() {
                 $plus.remove();
             });
+        },
+
+        handleClickBtnToggle: function() {
+            if(this.$sectionConfig.css('display') == 'none') {
+                this.$sectionConfig.show();
+            } else {
+                this.$sectionConfig.hide();
+            }
         },
 
         handleClickBtnReset: function() {
