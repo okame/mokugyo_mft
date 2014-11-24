@@ -1,0 +1,15 @@
+{
+    "name": "MOKUGYO_MFT",
+    "description": "MOKUGYO Interface for MFT2014",
+    "version": "0.2",
+    "app": {
+        "background": {
+            "scripts": ["js/background.js"]
+        }
+    },
+    "icons": { "128": "icon-128.png" },
+    "permissions": [
+        "serial",
+        "storage"
+    ]
+}

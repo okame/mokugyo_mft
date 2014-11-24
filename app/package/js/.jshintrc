@@ -1,0 +1,19 @@
+{
+    "indent" : 2,
+    "maxlen" : 100,
+    "unused" : true,
+    "undef" : true,
+    "newcap" : true,
+    "globals": {
+        "console": true,
+        "setInterval": true,
+        "_": true,
+        "Uint8Array": true,
+        "jQuery": true,
+        "document": true,
+        "fromCharCode": true,
+        "$": true,
+        "webkitAudioContext": true,
+        "chrome": true
+    }
+}

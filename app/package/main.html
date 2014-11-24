@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>skeleton</title>
+  <style type="text/css">
+    window {
+      width: 1000px;
+      height: 500px;
+    }
+    section span {
+      display: inline-block;
+      width: 50px;
+    }
+    .cnt_box {
+      font-size: 60px;
+      text-align: center;
+      margin-top: 70px;
+    }
+    .cnt_box span {
+      display: inline;
+    }
+    .config {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+	<h1>Mokugyo Clicker</h1>
+
+  <hr />
+
+  <section class="config">
+    <h2>Ports</h2>
+    <select id="portSelect">
+      <!-- render by template(#tmplPortSelect) -->
+    </select>
+    <button id="btnConnect">connect</button>
+    <button id="btnDisConnect">dis connect</button>
+    <button id="btnHit">Hit</button>
+    <button id="btnReset">Reset</button>
+    <p id="labelConnect">not conneted</p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h3 class="cnt_box"><span id="cnt">0</span>
+      <span class="pnt">ポイント</span>
+    </h3>
+  </section>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/underscore.string.min.js"></script>
+	<script type="text/javascript" src="js/audio.js"></script>
+	<script type="text/javascript" src="js/arduino.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+  <!-- templates -->
+  <script id="tmplPortSelect" type="text/template">
+    <option value="{{port}}">{{port}}</option>
+  </script>
+</body>
+</html>
+
