@@ -14,7 +14,8 @@ var MKG = MKG || {};
     var c = {
         BITRATE: 9600,
         MIC_TH: 500,
-        CNT_KEY: 'mokugyo_cnt'
+        CNT_KEY: 'mokugyo_cnt',
+        PLUS: '<div class="plus">+1</div>'
     };
 
     /* ---------------------------------
@@ -52,6 +53,7 @@ var MKG = MKG || {};
                 self.$cnt.html(self.cnt);
             });
 
+            this.$plus_box = $('.plus_box');
             this.templatePortSelect = $('#tmplPortSelect').html();
             this.fetchDevices().done(function() {
                 self.renderPorts();
@@ -66,9 +68,15 @@ var MKG = MKG || {};
             this.$cnt.html(this.cnt);
             data[c.CNT_KEY] = this.cnt;
             chrome.storage.local.set(data);
+            this.addPlus1();
         },
 
         addPlus1: function() {
+            var $plus = $(c.PLUS);
+            this.$plus_box.append($plus);
+            $plus.animate({top: -20}).promise().done(function() {
+                $plus.remove();
+            });
         },
 
         handleClickBtnReset: function() {

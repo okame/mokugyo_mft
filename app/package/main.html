@@ -24,6 +24,19 @@
     .config {
       color: gray;
     }
+
+    .plus_box {
+      height: 20px;
+      position: relative;
+    }
+    .plus_box .plus {
+      position: absolute;
+      left: 50%;
+      margin-left: -10px;
+      top: 20px;
+      font-size: 30px;
+    }
+
   </style>
 </head>
 <body>
@@ -46,6 +59,7 @@
   <hr />
 
   <section>
+    <div class="plus_box"></div>
     <h3 class="cnt_box"><span id="cnt">0</span>
       <span class="pnt">ポイント</span>
     </h3>
