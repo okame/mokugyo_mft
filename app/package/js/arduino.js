@@ -68,6 +68,9 @@ var MKG = MKG || {};
             chrome.storage.local.set(data);
         },
 
+        addPlus1: function() {
+        },
+
         handleClickBtnReset: function() {
             this.cnt = -1;
             this.updateCnt();
